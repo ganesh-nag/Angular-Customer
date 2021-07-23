@@ -1,0 +1,28 @@
+<div class="col-md-6">
+    <h2> Login page</h2>
+    <form>
+        <div class="form-group">
+			<label for="name">Username:</label> <input type="text"
+				class="form-control" id="name" name="name"
+				[(ngModel)]="user.name" />
+		</div>
+		<div class="form-group">
+			<label for="password">Password:</label> <input type="password"
+				class="form-control" id="password" name="password"
+				[(ngModel)]="user.password" />
+        </div>
+        <div class="form-group">
+			<label for="customerName">Customer Name:</label> <input type="text"
+				class="form-control" id="customerName" name="customerName"
+				[(ngModel)]="user.customerName" />
+		</div>
+		<button
+class='btn btn-primary'
+(click)='login()'>
+Sign in
+</button>
+
+	<pre>Data Obtained is: {{ result | json }}</pre>
+	<pre>Error Message: {{errorMessage | json}}</pre>
+</form>
+</div>
